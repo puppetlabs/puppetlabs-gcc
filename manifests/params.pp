@@ -13,7 +13,7 @@
 class gcc::params{
   
   case $operatingsystem {
-    'fedora', 'centos', 'redhat': {
+    'fedora', 'centos', 'redhat', 'Amazon': {
        $gcc_package = 'gcc'
     }
     'ubuntu', 'debian': {
