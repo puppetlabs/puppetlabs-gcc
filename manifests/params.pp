@@ -12,11 +12,11 @@
 #
 class gcc::params{
   
-  case $operatingsystem {
-    'fedora', 'centos', 'redhat': {
+  case $::osfamily {
+    'RedHat': {
        $gcc_package = 'gcc'
     }
-    'ubuntu', 'debian': {
+    'Debian': {
        $gcc_package = [ 'gcc', 'build-essential' ]
     }
   }
