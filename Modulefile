@@ -1,5 +1,5 @@
 name 'puppetlabs-gcc'
-version '0.0.3'
+version '0.1.0'
 source 'git://github.com/puppetlabs/puppetlabs-gcc.git'
 author 'puppetlabs'
 license 'Apache 2.0'
