@@ -11,11 +11,12 @@
 #
 # Sample Usage:
 #
-class gcc {
- 
-  include gcc::params
-
-  package { $gcc::params::gcc_package:
-    ensure => installed 
+class gcc(
+  $gcc_package = $gcc::params::gcc_package,
+) inherits gcc::params {
+  package { $gcc_package:
+    ensure => installed
   }
 }
+
+# vim: set ts=2 sw=2 et ft=puppet:
