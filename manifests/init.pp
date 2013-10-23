@@ -12,10 +12,6 @@
 # Sample Usage:
 #
 class gcc {
- 
   include gcc::params
-
-  package { $gcc::params::gcc_package:
-    ensure => installed 
-  }
+  ensure_packages(any2array($gcc::params::gcc_package))
 }
