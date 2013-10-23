@@ -14,10 +14,10 @@ class gcc::params{
   
   case $::osfamily {
     'RedHat': {
-       $gcc_package = 'gcc'
+       $gcc_packages = ['gcc']
     }
     'Debian': {
-       $gcc_package = [ 'gcc', 'build-essential' ]
+       $gcc_packages = [ 'gcc', 'build-essential' ]
     }
   }
 }
