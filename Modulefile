@@ -6,5 +6,5 @@ license 'Apache 2.0'
 summary 'module for installing gcc build utils'
 description 'module for installing gcc build utils'
 project_page 'https://github.com/puppetlabs/puppetlabs-gcc/'
-
+dependency 'puppetlabs/stdlib', '>=2.0'
 
