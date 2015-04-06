@@ -1,6 +1,6 @@
 {
   "name": "puppetlabs-gcc",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "author": "Puppet Labs",
   "summary": "Module for installing gcc build utils",
   "license": "Apache-2.0",
