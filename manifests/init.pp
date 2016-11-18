@@ -1,18 +1,33 @@
-# Class: gcc
+# == Class: gcc
 #
-# This class installs gcc
+# Manage the gcc package(s).
 #
-# Parameters:
-#
-# Actions:
-#   - Install the gcc package
-#
-# Requires:
-#
-# Sample Usage:
-#
-class gcc(
-  $gcc_packages = $gcc::params::gcc_packages,
-) inherits gcc::params {
-  ensure_packages($gcc_packages)
+class gcc (
+  $package_name   = undef,
+  $package_ensure = 'present'
+) {
+
+  if $package_name == undef {
+    case $::osfamily {
+      'RedHat': {
+        $package_name_real = [ 'gcc', 'gcc-c++' ]
+      }
+      'Debian': {
+        $package_name_real = [ 'gcc', 'build-essential' ]
+      }
+      default: {
+        $package_name_real = 'gcc'
+      }
+    }
+  } else {
+    if is_string($package_name) == false and is_array($package_name) == false {
+      fail('package_name must be an array or a string.')
+    } else {
+      $package_name_real = $package_name
+    }
+  }
+
+  package { $package_name_real:
+    ensure => $package_ensure,
+  }
 }

@@ -1,3 +1,7 @@
+## [1.0.0] - 2016-11
+  - `gcc_packages` renamed to `package_name`
+  - `package_ensure` parameter added with default value of 'present'
+
 ## [0.3.0] - 2015-04-07
 ###Backwards-incompatible changes
 - `gcc_package` parameter in `class gcc` was renamed to `gcc_packages`
@@ -11,7 +15,7 @@
 - Add g++ for RHEL.
 - Fail on unsupported distributions.
 
-## [0.1.0] - 2013-08-14 
+## [0.1.0] - 2013-08-14
 ###Features
 - Support `$osfamily` instead of using `$operatingsystem`. Note that
 Amazon Linux is RedHat osfamily on facter version 1.7
