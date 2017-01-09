@@ -1,3 +1,7 @@
+## [1.0.0] - 2017-01-09
+### Changed
+- Incremented version to 1.0.0 for the sake of stability
+
 ## [0.3.0] - 2015-04-07
 ###Backwards-incompatible changes
 - `gcc_package` parameter in `class gcc` was renamed to `gcc_packages`
@@ -24,3 +28,4 @@ Amazon Linux is RedHat osfamily on facter version 1.7
 [0.1.0]: https://github.com/puppetlabs/puppetlabs-gcc/compare/0.0.3...0.1.0
 [0.2.0]: https://github.com/puppetlabs/puppetlabs-gcc/compare/0.1.0...0.2.0
 [0.3.0]: https://github.com/puppetlabs/puppetlabs-gcc/compare/0.2.0...0.3.0
+[1.0.0]: https://github.com/puppetlabs/puppetlabs-gcc/compare/0.3.0...1.0.0
