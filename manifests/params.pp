@@ -18,6 +18,9 @@ class gcc::params {
     'Debian': {
       $gcc_packages = [ 'gcc', 'build-essential' ]
     }
+    'Archlinux': {
+      $gcc_packages = ['gcc']
+    }
     default: {
       fail("Class['gcc::params']: Unsupported osfamily: ${facts['os']['family']}")
     }
