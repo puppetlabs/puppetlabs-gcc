@@ -11,15 +11,18 @@
 # Sample Usage:
 #
 class gcc::params {
-  case $::osfamily {
+  case $facts['os']['family'] {
     'RedHat': {
       $gcc_packages = [ 'gcc', 'gcc-c++' ]
     }
     'Debian': {
       $gcc_packages = [ 'gcc', 'build-essential' ]
     }
+    'Archlinux': {
+      $gcc_packages = ['gcc']
+    }
     default: {
-      fail("Class['gcc::params']: Unsupported osfamily: ${::osfamily}")
+      fail("Class['gcc::params']: Unsupported osfamily: ${facts['os']['family']}")
     }
   }
 }

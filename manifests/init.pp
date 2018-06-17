@@ -12,7 +12,7 @@
 # Sample Usage:
 #
 class gcc(
-  $gcc_packages = $gcc::params::gcc_packages,
+  Array $gcc_packages = $gcc::params::gcc_packages,
 ) inherits gcc::params {
   ensure_packages($gcc_packages)
 }
